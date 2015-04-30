@@ -8,9 +8,11 @@ Download from http://example.com/FIXME.
 
 ## Usage
 
-FIXME: explanation
+Needs to import the document in resources/user.json first
 
-    $ java -jar mongoex-0.1.0-standalone.jar [args]
+    $ mongoimport -d "tests-db" -c "users" resources/user.json
+
+    $ lein run
 
 ## Options
 

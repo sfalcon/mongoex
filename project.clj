@@ -8,6 +8,7 @@
                  [clj-http "1.1.1"]
                  [compojure "1.3.3"]
                  [ring "1.3.2"]
+                 [ring-server "0.4.0"]
                  [hiccup "1.0.5"]]
   :plugins [[lein-marginalia "0.8.0"]
             [lein-ring "0.9.3"]]
@@ -15,4 +16,5 @@
   :main ^:skip-aot mongoex.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}
-             :dev {:dependencies [[midje "1.6.3"]]}})
+             :dev {:dependencies [[midje "1.6.3"]
+                                  [ring-mock "0.1.5"]]}})

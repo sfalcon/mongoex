@@ -20,7 +20,7 @@
        (fact "A succesful query response would be"
              (user-response test-user) =>
              {:status 200
-              :headers {"Content-Type" "plain/text"}
+              :headers {"Content-Type" "text/html"}
               :body (str "<ul>"
                          "<il>name: Anthony Stallman</il>"
                          "<il>location: Los Angeles</il>"
