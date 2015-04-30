@@ -11,7 +11,7 @@
   (let [gen (fn [doc]
               (hiccup/html [:ul
                             (for [[k v] doc]
-                              [:il (str (name k) ": " v)])]))]
+                              [:li (str (name k) ": " v)])]))]
     ;;if its a list of docs we map gen on all docs and create a single string
     (if (seq? user-data)
       (apply str (map gen user-data))

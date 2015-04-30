@@ -13,16 +13,16 @@
        (fact "User data gets generated as html"
              (generate-html test-user) =>
              (str "<ul>"
-                  "<il>name: Anthony Stallman</il>"
-                  "<il>location: Los Angeles</il>"
-                  "<il>occupation: Business Analyst</il>"
+                  "<li>name: Anthony Stallman</li>"
+                  "<li>location: Los Angeles</li>"
+                  "<li>occupation: Business Analyst</li>"
                   "</ul>"))
        (fact "A succesful query response would be"
              (user-response test-user) =>
              {:status 200
               :headers {"Content-Type" "text/html"}
               :body (str "<ul>"
-                         "<il>name: Anthony Stallman</il>"
-                         "<il>location: Los Angeles</il>"
-                         "<il>occupation: Business Analyst</il>"
+                         "<li>name: Anthony Stallman</li>"
+                         "<li>location: Los Angeles</li>"
+                         "<li>occupation: Business Analyst</li>"
                          "</ul>")}))
