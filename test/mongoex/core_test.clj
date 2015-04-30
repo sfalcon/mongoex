@@ -3,8 +3,7 @@
             [mongoex.core :refer :all]
             [midje.sweet  :refer :all]
             [monger.core  :as mg]
-            [monger.collection :as mc]
-            [clj-http.client :as client]))
+            [monger.collection :as mc]))
 
 (def test-user
   {:name "Anthony Stallman"
@@ -32,7 +31,4 @@
                (-> (mc/remove test-db "users" {:name (:name test-user)})
                    (.getField "ok")) => 1)))
 
-
-(facts "About a simple Web API using MongoDB"
-       (fact "Endpoint is available"
-             ((client/get "http://127.0.0.1:1234/") :status) => 200 ))
+;;lets test our api now
