@@ -10,7 +10,12 @@ Needs to import the document in resources/user.json first
     $ mongoimport -d "tests-db" -c "users" resources/user.json
 
 Tests
-    $ lein test
+
+    $ lein midje
+    
+Continual testing (run tests everytime source changes)
+
+    $ lein autotest
 
 Running
 
